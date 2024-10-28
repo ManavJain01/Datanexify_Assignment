@@ -68,17 +68,17 @@ function GoogleAuthButton({ isAuthorized, onSignIn, onSignOut }) {
 
   if (isAuthorized) {
     return (
-      <button type="button" onClick={handleSignoutClick}>
+      <button type="button" onClick={handleSignoutClick} style={{ backgroundColor: "red", color: "white", padding: '10px 50px', border: 'none', borderRadius: "20px", cursor: "pointer" }}>
         Sign Out
       </button>
     );
   }
   return isGApiLoaded && isGisLoaded ? (
-    <button type="button" onClick={handleAuthClick}>
+    <button type="button" onClick={handleAuthClick} style={{ backgroundColor: "black", color: "white", padding: '10px 50px', borderRadius: "20px", cursor: "pointer" }}>
       Sign In
     </button>
   ) : (
-    "Loading"
+    <span style={{ backgroundColor: "orange", color: "white", padding: '10px 50px', border: 'none', borderRadius: "20px" }}>Loading</span>
   );
 }
 

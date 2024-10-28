@@ -10,8 +10,8 @@ function App() {
   const setIsAuthorizedFalse = () => setIsAuthorized(false);
 
   return (
-    <main>
-      <h1>App</h1>
+    <main style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignContent: "center", gap: "20px" }}>
+      <h1>Welcome to the Assignment</h1>
       <GoogleAuthButton
         isAuthorized={isAuthorized}
         onSignIn={setIsAuthorizedTrue}

@@ -54,8 +54,8 @@ const EventForm = ({ onSubmitComplete, onSubmitSuccess }) => {
   const startDateTimeFieldId = "event-form-start-date-time";
   const endDateTimeFieldId = "event-form-end-date-time";
   return (
-    <form onSubmit={handleSubmit}>
-      <section className="field">
+    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignContent: "center", gap: "10px" }}>
+      <section className="field" style={{ display: "flex", justifyContent: "space-between", alignContent: "center", gap: "10px" }}>
         <label htmlFor={summaryFieldId}>Summary</label>
         <input
           onChange={handleNameChange}
@@ -65,7 +65,7 @@ const EventForm = ({ onSubmitComplete, onSubmitSuccess }) => {
           required
         />
       </section>
-      <section className="field">
+      <section className="field" style={{ display: "flex", justifyContent: "space-between", alignContent: "center", gap: "10px" }}>
         <label htmlFor={startDateTimeFieldId}>Start Date & Time</label>
         <input
           onChange={handleStartDateTimeChange}
@@ -75,7 +75,7 @@ const EventForm = ({ onSubmitComplete, onSubmitSuccess }) => {
           required
         />
       </section>
-      <section className="field">
+      <section className="field" style={{ display: "flex", justifyContent: "space-between", alignContent: "center", gap: "10px" }}>
         <label htmlFor={endDateTimeFieldId}>End Date & Time</label>
         <input
           onChange={handleEndDateTimeChange}
@@ -85,7 +85,17 @@ const EventForm = ({ onSubmitComplete, onSubmitSuccess }) => {
           required
         />
       </section>
-      <button>Create</button>
+
+      <section style={{ display: "flex", justifyContent: "space-between", alignContent: "center", gap: "10px" }}>
+        <button style={{ backgroundColor: "green", color: "white", padding: '5px 50px', borderRadius: "5px", cursor: "pointer" }}>Create</button>
+        <button
+          type="button"
+          onClick={onSubmitComplete}
+          style={{ backgroundColor: "red", color: "white", padding: '5px 50px', borderRadius: "5px", cursor: "pointer" }}
+        >
+          Cancel
+        </button>
+      </section>
     </form>
   );
 };

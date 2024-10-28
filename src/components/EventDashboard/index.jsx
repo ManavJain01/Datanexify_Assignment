@@ -17,7 +17,7 @@ const EventDashboard = () => {
 
   return (
     <div>
-      <button onClick={handleCreateEventBtnClick} type="button">
+      <button onClick={handleCreateEventBtnClick} type="button" style={{ backgroundColor: "green", color: "white", padding: '10px 50px', border: 'none', borderRadius: "20px", cursor: "pointer" }}>
         Create New Event
       </button>
       <EventFormModal
