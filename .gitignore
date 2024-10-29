@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .env
 shack
+
+# local files
+recording
