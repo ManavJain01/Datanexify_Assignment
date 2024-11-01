@@ -6,6 +6,7 @@ require("dotenv").config();
 
 // Accessing Express Packages
 const express = require("express");
+const app = express();
 
 // Importing cors and using it.
 const cors = require("cors");
@@ -22,13 +23,13 @@ app.use(express.json());
 // Importing Database
 const mongoDB = require("./db/db");
 
-// set router
+// Set router
 app.use("/", routes);
 
 // Connecting MongoDB Server
 mongoDB();
 
 // Starting the server
-server.listen(5000, () => {
+app.listen(5000, () => {
   console.log("Server is running on port 5000.");
 });
